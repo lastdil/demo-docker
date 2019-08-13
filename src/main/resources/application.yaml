@@ -1,0 +1,16 @@
+management:
+  server:
+    port: 8081
+  endpoint:
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  metrics:
+    export.prometheus.enabled: true
+    distribution:
+      percentiles:
+        http.server.requests: 0.99
+        http.client.requests: 0.99
