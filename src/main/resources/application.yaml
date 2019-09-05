@@ -14,9 +14,12 @@ management:
       percentiles:
         http.server.requests: 0.99
         http.client.requests: 0.99
+    tags:
+      application: 'micrometer-application'
 
 spring:
   cloud:
     kubernetes:
       discovery:
         all-namespaces=true:
+
